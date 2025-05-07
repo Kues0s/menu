@@ -1,7 +1,6 @@
 #include <iostream>
 #include <conio.h>
 using namespace std;
-
 int nilai[5];
 int n = sizeof(nilai)/sizeof(nilai[0]);
 
@@ -15,7 +14,6 @@ cout<<"3. Exchange Sort"<<"\n";
 cout<<"4. Informasi"<<"\n";            
 cout<<"5. Exit"<<"\n";           
 cout<<"Masukan angka :";        
-
 }
 
 void MengisiNilai(){
@@ -29,22 +27,68 @@ for (int i = 0; i < n ; i++)
 getch();
 }
 
-void info(string pesan){
-  system("cls");
-  cout<<"Barcelona gagal juara "<<pesan;
-  getch();
-}
 
-void tampil(){
+void tampil(int nilai[]){
   system("cls");
-  cout << "Berikut Keseluruhan nilai anda" << endl;
+  cout << "Berikut keseluruhan nilai:" << endl;
   for(int i = 0 ; i < n; i++){
     cout << nilai[i] << " ";
   }
   getch();
 }
+void tukar(int *a, int *b){
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
 
+void exchangesort(int nilai[]){
+  system("cls");
+  cout << "pilih huruf 'u' untuk ascending dan huruf 'd' untuk descending : " << endl;
+  char x = getch();
+  getch();
 
+  switch (x)
+  {
+  case 'u':
+  {
+  for(int i = 0 ; i < n - 1 ; i++){
+    for(int j = i + 1; j < n; j++ ){
+      if(nilai[i] > nilai[j]){
+        tukar(&nilai[i], &nilai [j]); 
+      }
+    }
+  }
+  cout << "berhasil ascending, silahkan pilih menu tampilkan data "<< endl;
+  }
+  break;
+  case 'd':
+  {
+  for(int i = 0 ; i < n - 1 ; i++){
+    for(int j = i + 1; j < n; j++ ){
+      if(nilai[i] < nilai[j]){
+        tukar(&nilai[i], &nilai [j]); 
+        }
+      }
+    }
+  }
+  cout << "berhasil descending, Silahkan pilih menu tampilkan data" << endl;
+  break;
+  default:
+  system("cls");
+    cout << " Mohon input sesuai dengan ketentuan";
+  break;
+  }
+  getch();
+}
+
+void info(string pesan){
+  system("cls");
+  for(int i = 0 ; i < 10; i++){
+    cout<<"Secapek-capeknya kerja lebih capek nganggur "<<pesan << endl;
+  }
+  getch();
+}
 
 int main() {
 char pl;
@@ -58,14 +102,14 @@ do
     MengisiNilai();
     break;
    case '2':
-   tampil();
+   tampil(nilai);
     break;  
    case '3':
-   
+   exchangesort(nilai);
     /* code */
     break;  
    case '4':
-    info("UCL");
+    info("-Ernest Prakasa");
     /* code */
     break;  
   case '5':
