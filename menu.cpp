@@ -35,6 +35,16 @@ void info(string pesan){
   getch();
 }
 
+void tampil(){
+  system("cls");
+  cout << "Berikut Keseluruhan nilai anda" << endl;
+  for(int i = 0 ; i < n; i++){
+    cout << nilai[i] << " ";
+  }
+  getch();
+}
+
+
 
 int main() {
 char pl;
@@ -48,6 +58,7 @@ do
     MengisiNilai();
     break;
    case '2':
+   tampil();
     break;  
    case '3':
    
