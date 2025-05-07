@@ -2,22 +2,30 @@
 #include <conio.h>
 using namespace std;
 
+int nilai[5];
+int n = sizeof(nilai)/sizeof(nilai[0]);
+
 
 void dMenu(){
 system("cls");
 cout<<"Aplikasi Tampilan Menu"<<"\n";       
-cout<<"1. Menu Pertama"<<"\n";            
-cout<<"2. Menu Kedua"<<"\n";            
-cout<<"3. Menu Ketiga"<<"\n";           
+cout<<"1. Mengisi Data"<<"\n";            
+cout<<"2. Menampilkan Data"<<"\n";            
+cout<<"3. Exchange Sort"<<"\n";           
 cout<<"4. Informasi"<<"\n";            
 cout<<"5. Exit"<<"\n";           
 cout<<"Masukan angka :";        
 
 }
 
-void mPertama(string pesan){
+void MengisiNilai(){
 system("cls");
-cout<<"hallo saya menu "<<pesan;
+cout << "MONGGO ISI NILAI NYA " << endl << endl;
+for (int i = 0; i < n ; i++)
+{
+  cout << "Masukan nilai ke- " << i + 1 << ":";
+  cin >> nilai[i];
+}
 getch();
 }
 
@@ -37,15 +45,12 @@ do
   switch (pl)
   {
    case '1':
-    /* code */
-    mPertama("pertama");
+    MengisiNilai();
     break;
    case '2':
-    mPertama("ke- dua");
-    /* code */ 
     break;  
    case '3':
-    mPertama("ke- tiga");
+   
     /* code */
     break;  
    case '4':
