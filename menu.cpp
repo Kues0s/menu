@@ -52,27 +52,42 @@ void exchangesort(int nilai[]){
   {
   case 'u':
   {
+    system("cls");
   for(int i = 0 ; i < n - 1 ; i++){
     for(int j = i + 1; j < n; j++ ){
       if(nilai[i] > nilai[j]){
         tukar(&nilai[i], &nilai [j]); 
       }
+      for(int k = 0 ; k < n ; k++){
+        cout << nilai[k] << " ";
+      }
+      cout << endl;
     }
+    cout << endl ;
   }
-  cout << "berhasil ascending, silahkan pilih menu tampilkan data "<< endl;
+  cout << "berhasil ascending, hasil juga bisa dilihat dimenu menampilkan data "<< endl;
   }
   break;
+
   case 'd':
   {
+    system("cls");
   for(int i = 0 ; i < n - 1 ; i++){
     for(int j = i + 1; j < n; j++ ){
       if(nilai[i] < nilai[j]){
         tukar(&nilai[i], &nilai [j]); 
-        }
       }
+      for(int k = 0; k < n ; k++){
+        cout << nilai[k] << " ";
+      } 
+      cout << endl;
+      }
+      cout << endl;
     }
   }
-  cout << "berhasil descending, Silahkan pilih menu tampilkan data" << endl;
+
+  cout << endl;
+  cout << "berhasil descending, hasil juga bisa dilihat dimenu menampilkan data" << endl;
   break;
   default:
   system("cls");
