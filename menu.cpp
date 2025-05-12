@@ -18,7 +18,7 @@ cout<<"Masukan angka :";
 
 void MengisiNilai(){
 system("cls");
-cout << "MONGGO ISI NILAI NYA " << endl << endl;
+cout << " ========================MONGGO ISI NILAI NYA============================== " << endl << endl;
 for (int i = 0; i < n ; i++)
 {
   cout << "Masukan nilai ke- " << i + 1 << ":";
@@ -30,12 +30,14 @@ getch();
 
 void tampil(int nilai[]){
   system("cls");
-  cout << "Berikut keseluruhan nilai:" << endl;
+  cout << "=====================Menampilkan data==================" << endl;
+  cout << "Berikut keseluruhan nilai:  ";
   for(int i = 0 ; i < n; i++){
     cout << nilai[i] << " ";
   }
   getch();
 }
+
 void tukar(int *a, int *b){
   int temp = *a;
   *a = *b;
@@ -44,15 +46,14 @@ void tukar(int *a, int *b){
 
 void exchangesort(int nilai[]){
   system("cls");
+  cout<< "=================================EXCHANGE SORTING======================================"<< endl;
   cout << "pilih huruf 'u' untuk ascending dan huruf 'd' untuk descending : " << endl;
   char x = getch();
-  getch();
-
   switch (x)
   {
   case 'u':
   {
-    system("cls");
+  system("cls");
   for(int i = 0 ; i < n - 1 ; i++){
     for(int j = i + 1; j < n; j++ ){
       if(nilai[i] > nilai[j]){
@@ -71,7 +72,7 @@ void exchangesort(int nilai[]){
 
   case 'd':
   {
-    system("cls");
+  system("cls");
   for(int i = 0 ; i < n - 1 ; i++){
     for(int j = i + 1; j < n; j++ ){
       if(nilai[i] < nilai[j]){
@@ -99,8 +100,13 @@ void exchangesort(int nilai[]){
 
 void info(string pesan){
   system("cls");
+  cout << "============ Qoute of the day ===================" << endl;
   for(int i = 0 ; i < 10; i++){
-    cout<<"Secapek-capeknya kerja lebih capek nganggur "<<pesan << endl;
+    cout<<"just do what u gonna do "<<pesan << endl;
+    if (i == 5){
+      cout << "Jangan lupa sholat 5 waktu" << endl;
+      break;
+    }
   }
   getch();
 }
@@ -124,7 +130,7 @@ do
     /* code */
     break;  
    case '4':
-    info("-Ernest Prakasa");
+    info(":]");
     /* code */
     break;  
   case '5':
